@@ -1,3 +1,5 @@
+from ctypes.test import test_numbers
+from test.test_builtin import StrSquares
 bicycles=['trek','cannondale','redline','specialized']
 print(bicycles)
 print(bicycles[0])
@@ -77,3 +79,55 @@ print(cool_niggas)
 whips=['bmw','audi','toyota','subaru']
 whips.sort()
 print('\n'+str(whips))
+whips=['bmw','audi','toyota','subaru']
+print("Here is the original list")
+print(whips)
+print("\nHere is the alphabetical list")
+print(sorted(whips))
+print("\nHere is the original list again")
+print(whips)
+whips.reverse()
+print(whips)
+print(len(whips))
+witchs=['victoria','emry','addison','cathi']
+for witch in witchs:
+    print(witch.title())
+for witch in witchs:
+    print(witch.title()+", that was a super awesome trick!")
+    print("I can't wait to see the next one,"+witch.title()+".\n")
+for value in range(1,5):
+    print(value)
+numbers=list(range(1,6))
+print(numbers)
+even_numbers=list(range(2,11,2))
+print(even_numbers)
+odd_numbers=list(range(1,11,2))
+print(odd_numbers)
+three_numbers=list(range(1,13,3))
+print(three_numbers)
+squares=[]
+for value in range(1,25):
+    square=value**2
+    squares.append(square)
+print(squares)
+##Now we write the same thing but even shorter
+squares=[]
+for value in range(1,25):
+    squares.append(value**2)
+print(squares)
+print(min(squares))
+print(max(squares))
+print(sum(squares))
+## Now even shorter code to populate the list of square numbers by doing all the work when we identify the list
+squares=[value**2 for value in range(1,25)]
+print(squares)
+players=['charles','martina','michael','florence','eli']
+print(players[0:3])
+print(players[2:])
+print(players[-3:])
+print("Here are the first three players on my team: ")
+for player in players[:3]:
+    print(player.title())
+first_three=[player for player in players[:3]]    
+print("The first three players in my team are "+str(first_three).title()+".")
+
