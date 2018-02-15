@@ -102,23 +102,23 @@
 # while current_number < 10:
 #     current_number += 1
 # # this says if the number is an even number than continue the while loop and if
-# # not then go to the print funtion and then continue the while loop 
+# # not then go to the print function and then continue the while loop
 #     if current_number % 2 ==0:
 #         continue
 #     print(current_number)
 
 # exercise 7-4
-directions_prompt ="Tell me the toppings you want on your pizza.\n"
-directions_prompt +="Enter quit to stop entering toppings"
+directions_prompt = "Tell me the toppings you want on your pizza.\n"
+directions_prompt += "Enter quit to stop entering toppings"
 topping_prompt = "Enter your pizza topping: "
+
 print(directions_prompt)
 
 while True:
-    topping=input(topping_prompt)
-    
-    if topping.lower()=='quit':
+    topping = input(topping_prompt)
+
+    if topping.lower() == 'quit':
         break
     else:
         print("I will add "+topping.lower()+" to your pizza\n")
-
-    
+# This is a comment for fun
