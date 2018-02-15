@@ -127,6 +127,57 @@ for alien in aliens[:5]:
 print("...")
 # Show how many aliens have been added to the list
 print("Total number of aliens is "+str(len(aliens))+".")
+# Store information about a pizza being ordered
+pizza = {
+    'crust' : 'thick',
+    'toppings' : ['mushrooms','extra cheese']
+    }
+# Summarize the order
+print("You ordered a "+pizza['crust']+"-crust pizza with the following toppings:")
+for topping in pizza['toppings']:
+    print("\t"+topping)
 
+favorite_languages = {
+    'nic' : [],
+    'jen' : ['python','ruby'],
+    'sarah' : ['c'],
+    'edward' : ['ruby','go'],
+    'dick' : ['python','haskell'],
+    }
+# I added the set and soted command to weed out duplicates and put in 
+# Alphabetical order
+for name, languages in sorted(favorite_languages.items()):
+#adding if statements to refine the print statements
+    if len(languages)<1:
+        print("\n"+name.title()+" should take our survey!")
+    elif len(languages)<2:
+        print("\n"+name.title()+"'s favorite language is ")
+        for language in languages:
+            print("\t"+language.title())
+    else:
+        print("\n"+name.title()+"'s favorite languages are: ")
+        for language in sorted(set(languages)):
+            print("\t"+language.title())
+            
+users = {
+    'aeinstein' : {
+        'first' : 'albert',
+        'last' : 'einstein',
+        'location' : 'princeton',
+        },
+    'mcurie' : {
+        'first' : 'marie',
+        'last' : 'curie',
+        'location' : 'paris',
+        },
+    }
 
+for username, user_info in sorted(users.items()):
+    print("\nUsername: "+username)
+    full_name = user_info['first']+" "+user_info['last']
+    location = user_info['location']
+    
+    print("\tFull name: "+ full_name.title())
+    print("\tLocation: "+ location.title())
+        
         
