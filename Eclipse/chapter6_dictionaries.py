@@ -82,7 +82,7 @@ rivers_countries = {
     }
 for river, place in rivers_countries.items():
     print("The "+river.title()+' river is in '+place.title()+'.')
-
+# The set command means to pull out unique values
 for river in sorted(set(rivers_countries.keys())):
     print(river.title())
 #you should never have to sort the keys since they should be unique 
