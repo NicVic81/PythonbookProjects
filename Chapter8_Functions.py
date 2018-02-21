@@ -74,10 +74,61 @@
 
 # Exercise 8-5 Cities
 
-def describe_city(city_name, city_country='MERICA'):
-    """Now display a city and the country it is in"""
-    print(city_name.title() + " is a city in " + city_country.title() + ".")
+# def describe_city(city_name, city_country ='MERICA'):
+#     """Now display a city and the country it is in"""
+#     print(city_name.title() + " is a city in " + city_country.title() + ".")
+#
+# describe_city("parkersburg")
+# describe_city(city_name='vienna')
+# describe_city(city_name='london', city_country='Europe')
+# End of Exercise 8-5
+# def get_formatted_name(first_name, last_name):
+#     """Return a full name neatly formatted."""
+#     full_name = first_name + " " + last_name
+#     # This takes the user entered names and puts it in title format then returns it to the
+#     # full name variable, I think you could just do it by putting .title() on each variable in
+#     # the line above
+#     return full_name.title()
+#
+#
+# musician = get_formatted_name('jim', 'hendrix')
+# print(musician)
 
-describe_city("parkersburg")
-describe_city(city_name='vienna')
-describe_city(city_name='london', city_country='Europe')
+# Now setting an optional argument
+
+# def get_formatted_name(first_name, last_name, middle_name=''):
+#     """Return a full name, neatly formatted"""
+#     # The if middle name is a true false statement and if it is empty it is false
+#     if middle_name:
+#         full_name = first_name + ' ' + middle_name + ' ' + last_name
+#     else:
+#         full_name = first_name + ' ' + last_name
+#     return full_name.title()
+#
+#
+# musician = get_formatted_name('jim', 'hendrix')
+# print(musician)
+#
+# musician = get_formatted_name('john', 'hooker', 'lee')
+# print(musician)
+
+# Now using a function to return dictionary values
+# def build_person(first_name, last_name):
+#     """Return a dictionary of information about a person"""
+#     person = {'first': first_name, 'last': last_name}
+#     return person
+#
+# musician = build_person('jimi', 'hendrix')
+# print(musician)
+
+# Now adding in an optional age entry into the dictionary
+
+def build_person(first_name, last_name, age=''):
+    """Return a dictionary of information about a person."""
+    person = {'first': first_name, 'last': last_name}
+    if age:
+        person['age'] = age
+    return person
+
+musician = build_person('jimi', 'hendrix', age=27)
+print(musician)
