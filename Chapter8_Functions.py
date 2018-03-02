@@ -230,19 +230,75 @@
 # greet_users(usernames)
 #
 # Without using functions we are goign to move items from one list to another
-#  We are going to start with some things that need 3D printed
-unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+# #  We are going to start with some things that need 3D printed
+# unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+# completed_models = []
+#
+# # Simulate printing until they are all done
+# # Move each design to the completed listed after printing
+# while unprinted_designs:
+#     current_design = unprinted_designs.pop()
+#     # Simulate creating a 3D print form each design
+#     print("Printing model: " + current_design)
+#     completed_models.append(current_design)
+#
+# # Display all completed modles
+# print("\nThe following models have been printed:")
+# for completed_model in sorted(completed_models):
+#     print(completed_model.title())
+
+# Now we are goign to do this more efficiently by using functions
+# First here we had to send in both lists because we are working with both
+def print_models(unprinted_designs, completed_models):
+    """
+    Simulate printing each design, until none are left.
+    Move each design to copleted model list after printing.
+    """
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+
+        # Simulate creating a 3D print from the design
+        print("Printing model: " + current_design.title())
+        completed_models.append(current_design)
+
+def show_completed_models(completed_models):
+    """Show all the models that were printed"""
+    print("\nThe following models have been printed: ")
+    for completed_model in sorted(completed_models):
+        print(completed_model.title())
+
+# Now that that is all setup we now make the lists
+unprinted_designs = ['iphone case', 'robot pendant','dodecahedron']
 completed_models = []
+# And now we call the functions with the list from above as the variables
 
-# Simulate printing until they are all done
-# Move each design to the completed listed after printing
-while unprinted_designs:
-    current_design = unprinted_designs.pop()
-    # Simulate creating a 3D print form each design
-    print("Printing model: " + current_design)
-    completed_models.append(current_design)
+print_models(unprinted_designs, completed_models)
+show_completed_models(completed_models)
 
-# Display all completed modles
-print("\nThe following models have been printed:")
-for completed_model in sorted(completed_models):
-    print(completed_model.title())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
