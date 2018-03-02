@@ -123,12 +123,126 @@
 
 # Now adding in an optional age entry into the dictionary
 
-def build_person(first_name, last_name, age=''):
-    """Return a dictionary of information about a person."""
-    person = {'first': first_name, 'last': last_name}
-    if age:
-        person['age'] = age
-    return person
+# def build_person(first_name, last_name, age=''):
+#     """Return a dictionary of information about a person."""
+#     person = {'first': first_name, 'last': last_name}
+#     if age:
+#         person['age'] = age
+#     return person
+#
+# musician = build_person('jimi', 'hendrix', age=27)
+# print(musician)
 
-musician = build_person('jimi', 'hendrix', age=27)
-print(musician)
+# Using a function with a while loop
+
+# def get_formatted_name(first_name, last_name):
+#     """Return a full name, neatly formatted."""
+#     full_name = first_name + ' ' + last_name
+#     return full_name.title()
+#
+#
+# # This is an infinite loop because there is nothing to tell it to stop asking for a name.
+# while True:
+#     print("\nPlease tell me your name:")
+#     f_name = input("First name: ")
+#     l_name = input("Last name: ")
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print("\nHello, " + formatted_name + "!")
+
+# Here we add some if statements to break out of the while loop
+
+# def get_formatted_name(first_name, last_name):
+#     """Return a full name, neatly formatted."""
+#     full_name = first_name + ' ' + last_name
+#     return full_name.title()
+#
+#
+# while True:
+#     print("\nPlease tell me your name:")
+#     print("(enter 'q' at any time to quit)")
+#
+#     f_name = input("First name: ")
+#     if f_name == 'q':
+#         break
+#
+#     l_name = input("Last name: ")
+#     if l_name == 'q':
+#         break
+#
+#     formatted_name = get_formatted_name(f_name, l_name)
+#     print("\nHello, " + formatted_name + "!")
+
+# Exercise 8-6 City Names
+# def city_country(city_name, country_name):
+#     """Return the citry and country neatly formatted"""
+#     formatted_location = city_name + ", " + country_name
+#     return formatted_location.title()
+#
+#
+# place = city_country('parkersburg', 'merica')
+# print(place)
+
+# Exercise 8-7 Album
+
+# def make_album(artist_name, album_name):
+#     """Build dictionary of albums"""
+#     album_dictionary = {"artist" : artist_name.title(), "album" : album_name.title()}
+#     return album_dictionary
+#
+# user_album = make_album('NIN','pretty hate machine')
+# print(user_album)
+# user_album = make_album(artist_name='tool', album_name='undertow')
+# print(user_album)
+# user_album = make_album('your mom', 'queefs')
+# print(user_album)
+
+# Exercise 8-8 User Albums
+
+# def make_album(artist_name, album_name):
+#     """Build dictionary of albums"""
+#     album_dictionary = {"artist" : artist_name.title(), "album" : album_name.title()}
+#     return album_dictionary
+#
+# print("Please enter an artist and then the album name and I will build a dictionary of the inputs")
+# print("Enter 'quit' at any time to finish")
+#
+# while True:
+#     user_artist = input("\nArtist Name: ")
+#     if user_artist.lower() == 'quit':
+#         break
+#     user_album = input("Album Name: ")
+#     if user_album.lower() == 'quit':
+#         break
+#
+#     user_list = make_album(user_artist, user_album)
+#
+#     print("\nHere is your list:")
+#     print(user_list)
+
+#  We are going to be passing lists into functions now. This one is passing a list and then greeting each user.
+# def greet_users(names):
+#     """Print a simple greeting to each user in the list"""
+#     for name in names:
+#         msg = "Hello, " + name.title() + "!"
+#         print(msg)
+#
+# usernames = ['hannah', 'ty', 'margot']
+# greet_users(usernames)
+#
+# Without using functions we are goign to move items from one list to another
+#  We are going to start with some things that need 3D printed
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+# Simulate printing until they are all done
+# Move each design to the completed listed after printing
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    # Simulate creating a 3D print form each design
+    print("Printing model: " + current_design)
+    completed_models.append(current_design)
+
+# Display all completed modles
+print("\nThe following models have been printed:")
+for completed_model in sorted(completed_models):
+    print(completed_model.title())
