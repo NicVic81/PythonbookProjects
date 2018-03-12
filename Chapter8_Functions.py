@@ -249,32 +249,42 @@
 
 # Now we are goign to do this more efficiently by using functions
 # First here we had to send in both lists because we are working with both
-def print_models(unprinted_designs, completed_models):
-    """
-    Simulate printing each design, until none are left.
-    Move each design to copleted model list after printing.
-    """
-    while unprinted_designs:
-        current_design = unprinted_designs.pop()
+# def print_models(unprinted_designs, completed_models):
+#     """
+#     Simulate printing each design, until none are left.
+#     Move each design to copleted model list after printing.
+#     """
+#     while unprinted_designs:
+#         current_design = unprinted_designs.pop()
+#
+#         # Simulate creating a 3D print from the design
+#         print("Printing model: " + current_design.title())
+#         completed_models.append(current_design)
+#
+# def show_completed_models(completed_models):
+#     """Show all the models that were printed"""
+#     print("\nThe following models have been printed: ")
+#     for completed_model in sorted(completed_models):
+#         print(completed_model.title())
+#
+# # Now that that is all setup we now make the lists
+# unprinted_designs = ['iphone case', 'robot pendant','dodecahedron']
+# completed_models = []
+# # And now we call the functions with the list from above as the variables
+#
+# print_models(unprinted_designs, completed_models)
+# show_completed_models(completed_models)
+# Exercise 8-9 Magicians
+# def show_magicians(magician_list):
+#     """Print the magicians"""
+#     print("Here is the list of magicians:")
+#     for printed_magician in sorted(magician_list):
+#         print(printed_magician.title())
+#
+# magician_list = ['victoria johnson', 'addison johnson', 'emry johnson', 'rob mason']
+# show_magicians(magician_list)
 
-        # Simulate creating a 3D print from the design
-        print("Printing model: " + current_design.title())
-        completed_models.append(current_design)
-
-def show_completed_models(completed_models):
-    """Show all the models that were printed"""
-    print("\nThe following models have been printed: ")
-    for completed_model in sorted(completed_models):
-        print(completed_model.title())
-
-# Now that that is all setup we now make the lists
-unprinted_designs = ['iphone case', 'robot pendant','dodecahedron']
-completed_models = []
-# And now we call the functions with the list from above as the variables
-
-print_models(unprinted_designs, completed_models)
-show_completed_models(completed_models)
-
+# Exercise 8-10 Great Magicians page 150
 
 
 
