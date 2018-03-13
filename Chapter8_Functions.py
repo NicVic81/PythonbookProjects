@@ -247,12 +247,12 @@
 # for completed_model in sorted(completed_models):
 #     print(completed_model.title())
 
-# Now we are goign to do this more efficiently by using functions
+# Now we are going to do this more efficiently by using functions
 # First here we had to send in both lists because we are working with both
 # def print_models(unprinted_designs, completed_models):
 #     """
 #     Simulate printing each design, until none are left.
-#     Move each design to copleted model list after printing.
+#     Move each design to completed model list after printing.
 #     """
 #     while unprinted_designs:
 #         current_design = unprinted_designs.pop()
@@ -286,29 +286,43 @@
 
 # Exercise 8-10 Great Magicians page 150
 
+# def make_great(magician_list):
+#     """Add 'The Great' to the magicians name"""
+#     for magician in range(len(magician_list)):
+#         # having it count the number of magicians in the list and having it only run the  loop that many times
+#         # so it does not get stuck in the loop
+#         magician_list[magician] = magician_list[magician] + ' The Great'
+#         # now telling it to add the "The Great" to whatever number in the list it is at
+#
+#
+# def show_magicians(magician_list):
+#     """Print the magicians"""
+#     print("Here is the list of magicians:")
+#     for printed_magician in sorted(magician_list):
+#         print(printed_magician.title())
+#
+#
+# magician_list = ['victoria johnson', 'addison johnson', 'emry johnson', 'rob mason']
+# make_great(magician_list)
+# show_magicians(magician_list)
+
+# Exercise 8-11 Unchanged Magicians
+great_magicians_list = []
+magician_list = ['victoria johnson', 'addison johnson', 'emry johnson', 'rob mason']
+
+def make_great(magician_lists[:], great_magicians_list):
+    """Add 'The Great' to the magicians name"""
+    while magician_list:
+        magician = magician_list.pop() + ' The Great'
+        great_magicians_list.append(magician)
 
 
+def show_magicians(magician_list):
+    """Print the magicians"""
+    print("Here is the list of magicians:")
+    for printed_magician in sorted(magician_list):
+        print(printed_magician.title())
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+make_great(magician_list)
+show_magicians(magician_list)

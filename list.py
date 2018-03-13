@@ -100,10 +100,12 @@ for value in range(1,5):
 numbers=list(range(1,6))
 print(numbers)
 even_numbers=list(range(2,11,2))
+# The range values here are to go from 2 to 11 in increments of 2
 print(even_numbers)
 odd_numbers=list(range(1,11,2))
 print(odd_numbers)
 three_numbers=list(range(1,13,3))
+# The range values here are to go from 1 to 13 in increments of 3
 print(three_numbers)
 squares=[]
 for value in range(1,25):
