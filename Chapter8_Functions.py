@@ -346,22 +346,79 @@
 #     for topping in toppings:
 #         print("- " + topping)
 #
-# make_pizza('pepporoni')
+# make_pizza('pepperoni')
 # make_pizza('mushrooms', 'green peppers', 'extra cheese')
 
 # Now we are going to add another variable and since it is a fixed on the arbitrary one needs to come last
 
-def make_pizza(size, *toppings):
-    """Summarize the pizza we are abotu to make"""
-    print("\nMakinga a " + str(size) + "-inch pizza with the following toppings: ")
-    for topping in toppings:
-        print("- " + topping)
+# def make_pizza(size, *toppings):
+#     """Summarize the pizza we are about to make"""
+#     print("\nMaking  a " + str(size) + "-inch pizza with the following toppings: ")
+#     for topping in toppings:
+#         print("- " + topping)
+#
+#
+# make_pizza(16, 'pepperoni')
+# make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 
-make_pizza(16, 'pepperoni')
-make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
-
- # The double astrick in the next example tell python to build that variable as a dictionary
- def build_profile(first, last, **user_info):
-     """Build a dictionary containing everything we know about a user."""
+# The double asterisk in the next example tell python to build that variable as a dictionary
 
 
+# def build_profile(first, last, **user_info):
+#     """Build a dictionary containing everything we know about a user."""
+#     profile = {}
+#     profile['first_name'] = first
+#     profile['last_name'] = last
+#     for key, value in user_info.items():
+#         profile[key] = value
+#     return profile
+#
+#
+# user_profile = build_profile('albert', 'einstain',
+#                              location='princeton',
+#                              field='physics')
+# print(user_profile)
+
+# Exercise 8-12 Sandwiches
+#
+# def make_sandwich(*sandwich_items):
+#     """Summarize and print the sandwich we are making """
+#     print("\nWe are making with the following itesm: ")
+#     for item in sandwich_items:
+#         print("- " + item.title())
+#
+#
+# make_sandwich('Dis Dick', 'some vag', 'your mom')
+
+# Exercise 8-13 User Profile
+# def make_profile (first, last, **user_info):
+#     """Going to make a profile dictionary"""
+#     user_profile = {}
+#     user_profile['first name'] = first
+#     user_profile['last name'] = last
+#     for key, value in user_info.items():
+#         user_profile[key] = value
+#     return user_profile
+#
+#
+# my_profile = make_profile('nicholas', 'johnson',
+#                           dick='huge',
+#                           humor='dark',
+#                           speech='smart ass')
+# print(my_profile)
+
+# Exercise 8-14 Cars
+def make_car(make, model, **other_info):
+    """Make a dictionary of info on a car"""
+    car_info = {}
+    car_info["Make"] = make
+    car_info["Model"] = model
+    for key, value in other_info.items():
+        car_info[key] = value
+    return car_info
+
+
+car = make_car('chevy', 'corvette',
+               color='black',
+               Z06='Yes')
+print(car)
