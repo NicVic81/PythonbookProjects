@@ -249,7 +249,7 @@
 
 # Now we are going to do this more efficiently by using functions
 # First here we had to send in both lists because we are working with both
-# def print_models(unprinted_designs, completed_models):
+# def print_models(unprinted_designs[:], completed_models):
 #     """
 #     Simulate printing each design, until none are left.
 #     Move each design to completed model list after printing.
@@ -274,6 +274,7 @@
 #
 # print_models(unprinted_designs, completed_models)
 # show_completed_models(completed_models)
+
 # Exercise 8-9 Magicians
 # def show_magicians(magician_list):
 #     """Print the magicians"""
@@ -307,22 +308,60 @@
 # show_magicians(magician_list)
 
 # Exercise 8-11 Unchanged Magicians
-great_magicians_list = []
-magician_list = ['victoria johnson', 'addison johnson', 'emry johnson', 'rob mason']
-
-def make_great(magician_lists[:], great_magicians_list):
-    """Add 'The Great' to the magicians name"""
-    while magician_list:
-        magician = magician_list.pop() + ' The Great'
-        great_magicians_list.append(magician)
 
 
-def show_magicians(magician_list):
-    """Print the magicians"""
-    print("Here is the list of magicians:")
-    for printed_magician in sorted(magician_list):
-        print(printed_magician.title())
+# def make_great(magician_list, great_magicians_list):
+#     """Add 'The Great' to the magicians name"""
+#     while magician_list:
+#         magician = magician_list.pop() + ' The Great'
+#         great_magicians_list.append(magician)
+#
+#
+# def show_magicians(magician_list):
+#     """Print the magicians"""
+#     print("Here is the list of magicians:")
+#     for printed_magician in sorted(magician_list):
+#         print(printed_magician.title())
+#
+# great_magicians_list = []
+# magician_list = ['victoria johnson', 'addison johnson', 'emry johnson', 'rob mason']
+# # Here we use the [:] to send a copy of the list so it does not change it
+# make_great(magician_list[:], great_magicians_list)
+# show_magicians(magician_list)
+# show_magicians(great_magicians_list)
+
+# Passing an arbitrary number of argumetns.
+# the * and then the variable name means it will take as many variables as we send it
+# def make_pizza(*toppings):
+#     """Print the list of toppings that have been requested."""
+#     print(toppings)
+#
+# make_pizza('pepperoni')
+# make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+# Now with a loop to better print out the toppings
+# def make_pizza(*toppings):
+#     """Summarize the pizza we are about to make"""
+#     print("\nMaking a pizza with the following toppings: ")
+#     for topping in toppings:
+#         print("- " + topping)
+#
+# make_pizza('pepporoni')
+# make_pizza('mushrooms', 'green peppers', 'extra cheese')
+
+# Now we are going to add another variable and since it is a fixed on the arbitrary one needs to come last
+
+def make_pizza(size, *toppings):
+    """Summarize the pizza we are abotu to make"""
+    print("\nMakinga a " + str(size) + "-inch pizza with the following toppings: ")
+    for topping in toppings:
+        print("- " + topping)
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+ # The double astrick in the next example tell python to build that variable as a dictionary
+ def build_profile(first, last, **user_info):
+     """Build a dictionary containing everything we know about a user."""
 
 
-make_great(magician_list)
-show_magicians(magician_list)
