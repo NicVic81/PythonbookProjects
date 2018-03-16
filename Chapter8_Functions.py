@@ -242,7 +242,7 @@
 #     print("Printing model: " + current_design)
 #     completed_models.append(current_design)
 #
-# # Display all completed modles
+# # Display all completed models
 # print("\nThe following models have been printed:")
 # for completed_model in sorted(completed_models):
 #     print(completed_model.title())
