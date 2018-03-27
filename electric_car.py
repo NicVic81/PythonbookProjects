@@ -120,8 +120,8 @@ class ElectricCar(Car):
         Then initialize attributes specific to an electric car.
         """
         super().__init__(make, model, year)
-        # Here we assign an attribute "battery" the value of an instance from the battery class and of course we just set
-        # everything default and did not pass any variables
+        # Here we assign an attribute "battery" the value of an instance from the battery class and of course we
+        # just set everything default and did not pass any variables
         self.battery = Battery()
 
     def fill_gas_tank(self):
