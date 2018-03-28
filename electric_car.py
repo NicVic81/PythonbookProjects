@@ -64,6 +64,7 @@
 
 # Now we are breaking the battery into a class by itself
 
+
 class Car:
     """A simple attempt to represent a car."""
 
@@ -110,6 +111,21 @@ class Battery:
         """Print a statement describing the battery size."""
         print("This car has a " + str(self.battery_size) + "-kWh battery.")
 
+    def get_range(self):
+        """Print a statement about the range this battery provides"""
+        if self.battery_size == 70:
+            range = 240
+            message = "This car can go approximately " + str(range)
+            message += " miles on a full charge."
+        elif self.battery_size == 85:
+            range = 270
+            message = "This car can go approximately " + str(range)
+            message += " miles on a full charge."
+        else:
+            message = "Please enter an appropriate battery size"
+
+            print(message)
+
 
 class ElectricCar(Car):
     """Represent aspects of a car, specific to electric vehicles"""
@@ -122,7 +138,7 @@ class ElectricCar(Car):
         super().__init__(make, model, year)
         # Here we assign an attribute "battery" the value of an instance from the battery class and of course we
         # just set everything default and did not pass any variables
-        self.battery = Battery()
+        self.battery = Battery(65)
 
     def fill_gas_tank(self):
         """Electric cars do not have gas tanks."""
@@ -138,3 +154,4 @@ my_other_car = Car('chevy', 'corvette', '2018')
 print("My car has a/an " + my_other_car.tank_level + " gas tank")
 my_other_car.fill_gas_tank()
 print("My car has a/an " + my_other_car.tank_level + " gas tank")
+my_tesla.battery.get_range()
