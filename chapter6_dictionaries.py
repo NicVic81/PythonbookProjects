@@ -160,7 +160,7 @@ for name, languages in sorted(favorite_languages.items()):
             print("\t"+language.title())
             
 users = {
-    'aeinstein' : {
+    'einstein' : {
         'first' : 'albert',
         'last' : 'einstein',
         'location' : 'princeton',

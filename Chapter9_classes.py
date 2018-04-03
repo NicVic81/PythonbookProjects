@@ -480,3 +480,35 @@
 # my_user.admin_privileges.show_privilege()
 # my_user.describe_user()
 
+# Exercise 9-13 OrderedDict Rewrite
+# from collections import OrderedDict
+#
+# python_glossary = OrderedDict()
+# python_glossary['class'] = 'a way of building things'
+# python_glossary['run'] = 'to execute the program'
+# python_glossary['module'] = 'a place to store functions and classes'
+# python_glossary['debug'] = 'to find errors in the code'
+# python_glossary['comment'] = 'line of code that is ignored'
+#
+#
+# for word, definition in python_glossary.items():
+#     print("In Python " + word + " means - " + definition + ".")
+
+# Exercise 9-14 Dice
+
+from random import randint
+
+class Die:
+    def __init__(self, sides =6):
+        self.sides = sides
+
+    def roll_die(self):
+        x = randint(1, self.sides)
+        print("You rolled a " + str(x) + ".")
+
+my_dice = Die()
+my_dice.roll_die()
+my_dice = Die(10)
+my_dice.roll_die()
+my_dice = Die(20)
+my_dice.roll_die()
