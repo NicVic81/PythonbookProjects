@@ -1,0 +1,3 @@
+In Python you can open and read from txt files.
+In Python you can use while loops to do some crazy shit.
+In Python you can make a key logger.
