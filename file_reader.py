@@ -25,14 +25,24 @@
 #     print(line.rstrip())
 
 # Now we are going to try and take all the info in the file and store it in one string
-filename = 'pi_digits.txt'
+# filename = 'pi_digits.txt'
+#
+# with open(filename) as file_object:
+#     lines = file_object.readlines()
+#
+# pi_string = ''
+# for line in lines:
+#     pi_string += line.strip()
+#
+# print(pi_string)
+# print(len(pi_string))
 
+# Showing that you can do a million digits
+filename = 'OnlineResources/chapter_10/pi_million_digits.txt'
 with open(filename) as file_object:
     lines = file_object.readlines()
-
-pi_string = ''
+    pi_string = ''
 for line in lines:
-    pi_string += line.rstrip()
-
-print(pi_string)
+    pi_string += line.strip()
+print(pi_string[:52] + "...")
 print(len(pi_string))
