@@ -90,19 +90,53 @@
 # except FileNotFoundError:
 #     print("I am sorry the file " + filename + " was not found.")
 
-# Now to import the contents of a text file and count the number of words while uisng a try-except block.
+# Now to import the contents of a text file and count the number of words while using a try-except block.
 
-book_file = 'OnlineResources/chapter_10/alice.txt'
+# book_file = 'OnlineResources/chapter_10/alice.txt'
+#
+# try:
+#     with open(book_file) as book:
+#         contents = book.read()
+# except FileNotFoundError:
+#     msg = "I am sorry the file " + book_file + " is not found"
+#     print(msg)
+# else:
+#     # Count the approximate number of words in the book
+#     word_list = contents.split()
+#     num_words = len(word_list)
+#     print("The file " + book_file + " has about " + str(num_words) + " words in it.")
 
-try:
-    with open(book_file) as book:
-        contents = book.read()
-except FileNotFoundError:
-    msg = "I am sorry the file " + book_file + " is not found"
-    print(msg)
-else:
-    # Count the approximate number of words in the book
-    word_list = contents.split()
-    num_words = len(word_list)
-    print("The file " + book_file + " has about " + str(num_words) + " words in it.")
+# import word_count
+#
+# filename = 'OnlineResources/chapter_10/alice.txt'
+# word_count.count_words(filename)
+#
+# from word_count import count_words
+# # filename = 'OnlineResources/chapter_10/alice.txt'
+# # count_words(filename)
+#
+# file_names = ['OnlineResources/chapter_10/alice.txt', 'OnlineResources/chapter_10/sidhartha.txt',
+#              'OnlineResources/chapter_10/moby_dick.txt', 'OnlineResources/chapter_10/little_women.txt']
+# for filename in file_names:
+#     count_words(filename)
 
+# Exercise 10-6 Addition and 10-7 Addition Calculator
+
+print("Please enter two numbers and I will add them together")
+print("Enter 'quit' to exit the program")
+while True:
+    number_one = input("\nNumber one: ")
+    if number_one.lower() == 'quit':
+        break
+    number_two = input("Number two: ")
+    if number_two.lower() == 'quit':
+        break
+    try:
+        addition_number = (int(number_one) + int(number_two))
+    except ValueError:
+        msg = "You entered a nonnumerical character"
+        print(msg)
+    else:
+        print("Your numbers added together equals = " + str(addition_number))
+
+print("Thanks for playing.")
