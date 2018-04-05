@@ -5,7 +5,7 @@
 #     # if we just use the print command we will get a blank line at the end so we use rstrip to remove the blank line.
 #     print(contents.rstrip())
 #
-# # Now we are goignto loop through the file with a for loop.
+# # Now we are going to loop through the file with a for loop.
 #
 # filename = "pi_digits.txt"
 #

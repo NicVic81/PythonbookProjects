@@ -64,22 +64,45 @@
 
 #  Starting to use error handlers or try-except block as they call them in Python
 
-print("Give me two numbers and I'll divide them.")
-print("Enter 'quit' to stop the program")
+# print("Give me two numbers and I'll divide them.")
+# print("Enter 'quit' to stop the program")
+#
+# while True:
+#     first_number = input("\nFirst Number: ")
+#     if first_number.lower() == 'quit':
+#         break
+#     second_number = input("Second Number: ")
+#     if second_number.lower() == 'quit':
+#         break
+#     try:
+#         answer = int(first_number) / int(second_number)
+#     except ZeroDivisionError:
+#         print("You can't divide by 0, you dumb cunt")
+#     else:
+#         print(answer)
+# Now handling the file not found error
+#
+# filename = 'alice.txt'
+#
+# try:
+#     with open(filename) as f_object:
+#         contents = f_object.read()
+# except FileNotFoundError:
+#     print("I am sorry the file " + filename + " was not found.")
 
-while True:
-    first_number = input("\nFirst Number: ")
-    if first_number.lower() == 'quit':
-        break
-    second_number = input("Second Number: ")
-    if second_number.lower() == 'quit':
-        break
-    try:
-        answer = int(first_number) / int(second_number)
-    except ZeroDivisionError:
-        print("You can't divide by 0, you dumb cunt")
-    else:
-        print(answer)
+# Now to import the contents of a text file and count the number of words while uisng a try-except block.
 
+book_file = 'OnlineResources/chapter_10/alice.txt'
 
+try:
+    with open(book_file) as book:
+        contents = book.read()
+except FileNotFoundError:
+    msg = "I am sorry the file " + book_file + " is not found"
+    print(msg)
+else:
+    # Count the approximate number of words in the book
+    word_list = contents.split()
+    num_words = len(word_list)
+    print("The file " + book_file + " has about " + str(num_words) + " words in it.")
 
