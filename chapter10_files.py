@@ -59,7 +59,7 @@
 #             visitors.write(name.title() + " has visited the site\n")
 
 #  Exercise 10-5 Programming Poll
-# This one was the same as 10-4 excpet it was goign to ask why you liked programming so I am not doing it just to cut
+# This one was the same as 10-4 except it was going to ask why you liked programming so I am not doing it just to cut
 # and paste code here
 
 #  Starting to use error handlers or try-except block as they call them in Python
