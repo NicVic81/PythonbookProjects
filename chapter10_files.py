@@ -122,21 +122,54 @@
 
 # Exercise 10-6 Addition and 10-7 Addition Calculator
 
-print("Please enter two numbers and I will add them together")
-print("Enter 'quit' to exit the program")
-while True:
-    number_one = input("\nNumber one: ")
-    if number_one.lower() == 'quit':
-        break
-    number_two = input("Number two: ")
-    if number_two.lower() == 'quit':
-        break
-    try:
-        addition_number = (int(number_one) + int(number_two))
-    except ValueError:
-        msg = "You entered a nonnumerical character"
-        print(msg)
-    else:
-        print("Your numbers added together equals = " + str(addition_number))
+# print("Please enter two numbers and I will add them together")
+# print("Enter 'quit' to exit the program")
+# while True:
+#     number_one = input("\nNumber one: ")
+#     if number_one.lower() == 'quit':
+#         break
+#     number_two = input("Number two: ")
+#     if number_two.lower() == 'quit':
+#         break
+#     try:
+#         addition_number = (int(number_one) + int(number_two))
+#     except ValueError:
+#         msg = "You entered a nonnumerical character"
+#         print(msg)
+#     else:
+#         print("Your numbers added together equals = " + str(addition_number))
+#
+# print("Thanks for playing.")
+# Not doing Exercise 10-8 and 10-9 because it is just using a try-except block to deal with file not found errors
+# Exercise 10-10 Common Words
+#
+# def word_search(filename, phrase):
+#     try:
+#         with open(filename) as f_object:
+#             contents = f_object.read()
+#     except FileNotFoundError:
+#         msg = "I am sorry the file " + filename + " was not found."
+#         print(msg)
+#     else:
+#         num_occure = contents.lower().count(phrase)
+#         print("The word or words '" + phrase + "' appears " + str(num_occure) + " times in " + filename + ".")
+#
+#
+# word_search('OnlineResources/chapter_10/alice.txt', 'alice')
 
-print("Thanks for playing.")
+# Exercise 10-11 and 10-13 Favorite Number and Favorite Number remembered
+import json
+filename = 'OnlineResources/chapter_10/fav_num.json'
+
+try:
+    with open(filename) as f_obj:
+        favorite_number = json.load(f_obj)
+except FileNotFoundError:
+        favorite_number = input("What is your  favorite number? ")
+        filename = 'OnlineResources/chapter_10/fav_num.json'
+        with open(filename, 'w') as f_obj:
+            json.dump(favorite_number, f_obj)
+else:
+    print("I know your favorite number! Its " + str(favorite_number) + ".")
+
+
