@@ -498,13 +498,15 @@
 
 from random import randint
 
+
 class Die:
-    def __init__(self, sides =6):
+    def __init__(self, sides=6):
         self.sides = sides
 
     def roll_die(self):
         x = randint(1, self.sides)
         print("You rolled a " + str(x) + ".")
+
 
 my_dice = Die()
 my_dice.roll_die()

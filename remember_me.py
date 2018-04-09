@@ -12,6 +12,7 @@ def get_stored_username():
     else:
         return username
 
+
 def store_username():
     """Prompt to store a username"""
     print("I am sorry you have not stored your name yet.")
@@ -30,14 +31,14 @@ def greet_user():
         print("Is your username " + username.title() + " ? ")
 
         while True:
-            correct_user =input("Please enter 'yes' or 'no' : ")
-            if not (correct_user.lower() == 'yes' or correct_user.lower() == 'no') :
+            correct_user = input("Please enter 'yes' or 'no' : ")
+            if not (correct_user.lower() == 'yes' or correct_user.lower() == 'no'):
                 msg = "That is not a correct response."
                 print(msg)
             else:
                 break
         if correct_user.lower() == 'yes':
-           print("Welcome back " + username.title() + "!")
+            print("Welcome back " + username.title() + "!")
         else:
             username = store_username()
             print("We will remember you when you come back, " + username.title() + "!")

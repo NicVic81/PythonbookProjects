@@ -159,17 +159,16 @@
 
 # Exercise 10-11 and 10-13 Favorite Number and Favorite Number remembered
 import json
+
 filename = 'OnlineResources/chapter_10/fav_num.json'
 
 try:
     with open(filename) as f_obj:
         favorite_number = json.load(f_obj)
 except FileNotFoundError:
-        favorite_number = input("What is your  favorite number? ")
-        filename = 'OnlineResources/chapter_10/fav_num.json'
-        with open(filename, 'w') as f_obj:
-            json.dump(favorite_number, f_obj)
+    favorite_number = input("What is your  favorite number? ")
+    filename = 'OnlineResources/chapter_10/fav_num.json'
+    with open(filename, 'w') as f_obj:
+        json.dump(favorite_number, f_obj)
 else:
     print("I know your favorite number! Its " + str(favorite_number) + ".")
-
-
